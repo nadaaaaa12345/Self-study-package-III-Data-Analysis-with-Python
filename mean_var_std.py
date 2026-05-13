@@ -3,9 +3,7 @@ import numpy as np
 def calculate(list):
     if len(list) != 9:
         raise ValueError("List must contain nine numbers.")
-    
     m = np.array(list).reshape(3, 3)
-    
     calculations = {
         'mean':               [m.mean(axis=0).tolist(), m.mean(axis=1).tolist(), m.mean().tolist()],
         'variance':           [m.var(axis=0).tolist(),  m.var(axis=1).tolist(),  m.var().tolist()],
